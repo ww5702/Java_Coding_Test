@@ -21,3 +21,38 @@ Math.ceil(pie) // 4 올림
 Math.round(pie) // 3 반올림
 Math.floor(pie) // 3 버림
 ```
+
+## 스트림에서 제공하는 기본 함수
+```
+import java.util.Arrays;
+public static void main (String [I args) {
+  int [] intArr = {1, 2, 3, 4, 5};
+
+  long count = Arrays.stream(intArr)
+    .filter (n -> 1%2 == 0)
+    .count () ;
+
+  long sum = Arrays. stream(intArr)
+    .filter (n -> n$2 == 0)
+    .sum ();
+
+  double avg = Arrays. stream(intArr)
+    .filter (n -> n%2 == 0)
+    .average ( )
+    .getAsDouble();
+
+  int max = Arravs.stream (intArr)
+    .filter (n -> n%2 == 0)
+    .max ( )
+    .getAsInt ();
+
+int min = Arravs.stream (intArr)
+    .filter (n -> n%2 == 0)
+    .min ()  
+    .getAsInt ();
+
+int first = Arrays.stream (intArr)
+    .filter (n -> n%2 == 0)
+    .findFirst()
+    .getAsInt ();
+```
