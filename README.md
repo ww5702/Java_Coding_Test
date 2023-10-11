@@ -6,6 +6,11 @@
 str 배열로 바꾸기
 string str = "happy birthday!"
 System.out.println(str.split("");  // h a p p y 띄어쓰기 b i r t h d a y !
+
+<배열>
+java의 배열은 크기를 정해줘야 한다.
+int[] answer = new int[arr.length]; 와 같이
+
 ```
 
 ```
@@ -36,7 +41,7 @@ public static void main (String [I args) {
   int [] intArr = {1, 2, 3, 4, 5};
 
   long count = Arrays.stream(intArr)
-    .filter (n -> 1%2 == 0)
+    .filter (n -> n%2 == 0)
     .count () ;
 
   long sum = Arrays. stream(intArr)
