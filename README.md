@@ -1,18 +1,6 @@
 # Java_Coding_Test
 [Java][프로그래머스] 알고리즘 풀이
 
-
-```
-str 배열로 바꾸기
-string str = "happy birthday!"
-System.out.println(str.split("");  // h a p p y 띄어쓰기 b i r t h d a y !
-
-<배열>
-java의 배열은 크기를 정해줘야 한다.
-int[] answer = new int[arr.length]; 와 같이
-
-```
-
 ```
 <형변환>   
 int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 32비트에 값을 저장한다는 것이다.
@@ -32,6 +20,16 @@ double pie = 3.141592;
 Math.ceil(pie) // 4 올림
 Math.round(pie) // 3 반올림
 Math.floor(pie) // 3 버림
+
+str 배열로 바꾸기
+string str = "happy birthday!"
+System.out.println(str.split("");  // h a p p y 띄어쓰기 b i r t h d a y !
+
+<배열>
+java의 배열은 크기를 정해줘야 한다.
+int[] answer = new int[arr.length]; 와 같이
+
+
 ```
 
 ## 스트림에서 제공하는 기본 함수
@@ -69,4 +67,12 @@ int first = Arrays.stream (intArr)
     .getAsInt ();
 ```
 
-
+## length, length(), size() 차이점
+```
+length
+arrays 즉 배열의 길이를 알고자 할때 사용
+length()
+문자열의 길이를 알고자 할때 사용
+size()
+arrayList, set etc,,, 등 컬렉션프레임워크 타입의 길이를 알고자 할때 사용
+```
