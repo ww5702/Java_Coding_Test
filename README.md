@@ -65,6 +65,11 @@ int first = Arrays.stream (intArr)
     .filter (n -> n%2 == 0)
     .findFirst()
     .getAsInt ();
+
+int[] result = Arrays.stream(numbers)
+    .map(i -> i*2)
+    .toArray();
+
 ```
 
 ## length, length(), size() 차이점
