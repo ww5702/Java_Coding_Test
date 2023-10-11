@@ -1,6 +1,13 @@
 # Java_Coding_Test
 [Java][프로그래머스] 알고리즘 풀이
 
+
+```
+str 배열로 바꾸기
+string str = "happy birthday!"
+System.out.println(str.split("");  // h a p p y 띄어쓰기 b i r t h d a y !
+```
+
 ```
 <형변환>   
 int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 32비트에 값을 저장한다는 것이다.
@@ -56,3 +63,5 @@ int first = Arrays.stream (intArr)
     .findFirst()
     .getAsInt ();
 ```
+
+
