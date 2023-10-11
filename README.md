@@ -86,3 +86,22 @@ length()
 size()
 arrayList, set etc,,, 등 컬렉션프레임워크 타입의 길이를 알고자 할때 사용
 ```
+
+## StringBuilder?
+```
+많은 문자열을 연결하면 중간 문자열 객체가 생성되어 비효율적인 코드가 생성된다.
+StringBuilder는 변경 가능한 문자열을 만들어주기 때문에
+String을 합치는 작업 시 하나의 대안이 될 수 있다.
+
+StringBuilder sb = new StringBuilder();
+sb.append("aaa");        // aaa
+sb.insert(2, "ccc");     // aaccca
+sb.replace(2,4, "5");    // aa5ca (index 2~3까지를 "5"로 교체
+sb.substring(3);         // ca
+sb.substring(1,2);       // a5
+sb.deleteCharAt(1);      // a5ca
+sb.delete(2, sb.length())// a5
+sb.toString();           // a5
+sb.reversed();           // 5a
+ 
+```
