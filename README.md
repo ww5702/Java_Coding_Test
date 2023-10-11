@@ -29,6 +29,11 @@ System.out.println(str.split("");  // h a p p y 띄어쓰기 b i r t h d a y !
 java의 배열은 크기를 정해줘야 한다.
 int[] answer = new int[arr.length]; 와 같이
 
+배열 순환
+for (int i: arr) {
+  System.out.println(i);
+}
+
 
 ```
 
