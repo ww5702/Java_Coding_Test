@@ -75,6 +75,11 @@ int[] result = Arrays.stream(numbers)
     .map(i -> i*2)
     .toArray();
 
+중복제거
+int[] result = Arrays.streama(numbers)
+    .distinct()
+    .toArray();
+
 ```
 
 ## length, length(), size() 차이점
