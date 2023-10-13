@@ -116,3 +116,6 @@ sb.toString();           // a5
 sb.reversed();           // 5a
  
 ```
+
+## Collection의 element를 제거할때 주의할점
+
