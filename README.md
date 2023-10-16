@@ -118,4 +118,16 @@ sb.reversed();           // 5a
 ```
 
 ## Collection의 element를 제거할때 주의할점
+```
+List<String> list = Arrays.asList(s1);
+Arrays.asList()를 통해 생성한 리스트의 인덱스를 삭제할때
+Exception in thread "main" java.lang.UnsupportedOperationException: remove
+와 같은 오류메세지를 확인할 수 있다.
 
+하지만 
+List<String> list = new ArrayList<>(Arrays.asList(s1));
+java.util.ArrayList로 감쌀때
+성공하는 모습을 확인할 수 있다.
+
+Arrays.asList는 구현되어 있지 않아 상위객체인 AbstractList에서 throw Exception 처리를 한것이다. 
+```
