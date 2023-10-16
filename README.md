@@ -45,13 +45,18 @@ for (int i: arr) {
 
 ## 스트림에서 제공하는 기본 함수
 ```
+스트림이란 자바 8 API에서 새로 추가된 기능이다.
+쉽게 생각하면 데이터 컬렉션 반복을 멋지게 처리하는 기능이라고 생각하자.
+filter, map, reduce, find, match, sort등 고차함수들을
+컬렉션, 배열, I/O 자원
+
 import java.util.Arrays;
 public static void main (String [I args) {
   int [] intArr = {1, 2, 3, 4, 5};
 
   long count = Arrays.stream(intArr)
     .filter (n -> n%2 == 0)
-    .count () ;
+    .count ();
 
   long sum = Arrays. stream(intArr)
     .filter (n -> n$2 == 0)
@@ -59,15 +64,15 @@ public static void main (String [I args) {
 
   double avg = Arrays. stream(intArr)
     .filter (n -> n%2 == 0)
-    .average ( )
+    .average ()
     .getAsDouble();
 
-  int max = Arravs.stream (intArr)
+  int max = Arrays.stream (intArr)
     .filter (n -> n%2 == 0)
-    .max ( )
+    .max ()
     .getAsInt ();
 
-int min = Arravs.stream (intArr)
+int min = Arrays.stream (intArr)
     .filter (n -> n%2 == 0)
     .min ()  
     .getAsInt ();
