@@ -51,6 +51,17 @@ for (int i: arr) {
 배열 자르기
 Arrays.copyOfRange(arr, start, end+1);
 
+배열 정렬
+Arrays.sort(arr);
+Arrays.sort(arr, Collections.reverseOrder());
+하지만
+[Error] no suitable method found for sort(int[],java.util.Comparator<java.lang.Object>)
+와 같은 오류가 발생할 수도 있다
+primitive타입에 대한 comparator가 없기 때문인데
+원시타입인 int배열에는 사용할 수 없고, 객체(integer)배열에서만 사용이 가능하다.
+따라서 int[]를 integer[]로 바꾸면 사용이 가능하다
+Integer[] newArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+
 ```
 
 ## 스트림에서 제공하는 기본 함수
