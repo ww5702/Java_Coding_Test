@@ -36,6 +36,7 @@ List<String> list = Arrays.asList(arr);
 
 ch -> string
 String.valueOf(ch);
+str.toCharArray();
 
 <소수점 올림, 반올림, 버림>
 Math함수를 이용해 해결한다.
