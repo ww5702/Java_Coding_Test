@@ -3,6 +3,9 @@
 
 ```
 <str>
+추가(append)
+str += "a"
+
 substring
 str.substring(start,end);
 
