@@ -6,6 +6,8 @@
 substring
 str.substring(start,end);
 
+contains
+str1.contains(str2) -> true or false
 
 
 <형변환>   
