@@ -54,13 +54,7 @@ Arrays.copyOfRange(arr, start, end+1);
 배열 정렬
 Arrays.sort(arr);
 Arrays.sort(arr, Collections.reverseOrder());
-하지만
-[Error] no suitable method found for sort(int[],java.util.Comparator<java.lang.Object>)
-와 같은 오류가 발생할 수도 있다
-primitive타입에 대한 comparator가 없기 때문인데
-원시타입인 int배열에는 사용할 수 없고, 객체(integer)배열에서만 사용이 가능하다.
-따라서 int[]를 integer[]로 바꾸면 사용이 가능하다
-Integer[] newArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+오류 발생시 아래 예외 확인
 
 ```
 
@@ -156,4 +150,15 @@ java.util.ArrayList로 감쌀때
 성공하는 모습을 확인할 수 있다.
 
 Arrays.asList는 구현되어 있지 않아 상위객체인 AbstractList에서 throw Exception 처리를 한것이다. 
+```
+## int배열 내림차순 오류
+```
+[Error] no suitable method found for sort(int[],java.util.Comparator<java.lang.Object>)
+와 같은 오류가 발생할 수도 있다
+
+primitive타입에 대한 comparator가 없기 때문인데
+원시타입인 int배열에는 사용할 수 없고, 객체(integer)배열에서만 사용이 가능하다.
+
+따라서 int[]를 integer[]로 바꾸면 사용이 가능하다
+Integer[] newArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
 ```
