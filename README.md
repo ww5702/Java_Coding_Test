@@ -2,6 +2,12 @@
 [Java][프로그래머스] 알고리즘 풀이
 
 ```
+<str>
+substring
+str.substring(start,end);
+
+
+
 <형변환>   
 int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 32비트에 값을 저장한다는 것이다.
 
