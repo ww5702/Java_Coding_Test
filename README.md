@@ -12,6 +12,9 @@ str.substring(start,end);
 contains
 str1.contains(str2) -> true or false
 
+repeat
+answer += ("h".repeat(3)); // hhh
+
 
 <형변환>   
 int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 32비트에 값을 저장한다는 것이다.
@@ -30,6 +33,9 @@ int b = b.intValue()
 
 array -> list
 List<String> list = Arrays.asList(arr);
+
+ch -> string
+String.valueOf(ch);
 
 <소수점 올림, 반올림, 버림>
 Math함수를 이용해 해결한다.
