@@ -46,6 +46,8 @@ for (int i: arr) {
   System.out.println(i);
 }
 
+배열 자르기
+Arrays.copyOfRange(arr, start, end+1);
 
 ```
 
