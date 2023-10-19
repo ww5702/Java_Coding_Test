@@ -49,8 +49,11 @@ str.toCharArray();
 (int)c = ascii코드로 인해 48 과 같은 숫자가 되어서 여기에 - 48을 해주거나
 Character.getNumericValue(c); -> 1,2,3 과 같이 반환된다.
 
-string -> array
+[string -> array]
 char[] arr = str.toCharArray();
+string str = "happy birthday!"
+System.out.println(str.split("");  // h a p p y 띄어쓰기 b i r t h d a y !
+
 
 <소수점 올림, 반올림, 버림>
 Math함수를 이용해 해결한다.
@@ -59,9 +62,10 @@ Math.ceil(pie) // 4 올림
 Math.round(pie) // 3 반올림
 Math.floor(pie) // 3 버림
 
-str 배열로 바꾸기
-string str = "happy birthday!"
-System.out.println(str.split("");  // h a p p y 띄어쓰기 b i r t h d a y !
+<대문자, 소문자, 앞뒤로 공백제거>
+str.toUpperCase();
+str.toLowerCase();
+str.trim();
 
 <배열>
 java의 배열은 크기를 정해줘야 한다.
