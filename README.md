@@ -79,6 +79,11 @@ Arrays.sort(arr, Collections.reverseOrder());
 java의 map
 mapToInt(Integer::parseInt)
 
+<asciiCode>
+char 값을 (int)c로 그저 출력해주면 그만
+a = 97  A = 65
+z = 122 Z = 90
+0~9 = 48~57
 ```
 
 ## 스트림에서 제공하는 기본 함수
