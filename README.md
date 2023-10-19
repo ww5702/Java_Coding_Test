@@ -17,7 +17,8 @@ answer += ("h".repeat(3)); // hhh
 
 replaceAll //asdf
 str.replaceAll("asdf,"22"); // 22
-
+여러개 지울때
+str.replaceAll("[aeiou]","") //sdf
 
 <형변환>   
 int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 32비트에 값을 저장한다는 것이다.
