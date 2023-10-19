@@ -42,6 +42,9 @@ ch -> string
 String.valueOf(ch);
 str.toCharArray();
 
+string -> array
+char[] arr = str.toCharArray();
+
 <소수점 올림, 반올림, 버림>
 Math함수를 이용해 해결한다.
 double pie = 3.141592;
