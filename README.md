@@ -20,11 +20,11 @@ answer += ("h".repeat(3)); // hhh
 int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 32비트에 값을 저장한다는 것이다.
 
 int -> double
-int a = 55;
 double b = (double) a;  // 55.0
-이렇게도 되지만
 double b = Double.valueOf(a);  // 55.0
-이 방법도 직접적이고 반복저긍로 구현하기 쉽다.
+int -> string
+String s = Integer.toString(n);
+String s = String.valueOf(n);
 
 double -> int
 int b = (int) a;
@@ -115,6 +115,11 @@ int[] result = Arrays.stream(numbers)
 int[] result = Arrays.streama(numbers)
     .distinct()
     .toArray();
+
+int to string to [string] , sum
+return Arrays.stream(String.valueOf(n).split(""))
+    .mapToInt(Integer::parseInt)
+    .sum();
 
 ```
 
