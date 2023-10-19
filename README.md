@@ -23,22 +23,25 @@ str.replaceAll("[aeiou]","") //sdf
 <형변환>   
 int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 32비트에 값을 저장한다는 것이다.
 
-int -> double
+[int -> double]
 double b = (double) a;  // 55.0
 double b = Double.valueOf(a);  // 55.0
 int -> string
 String s = Integer.toString(n);
 String s = String.valueOf(n);
 
-double -> int
+[double -> int]
 int b = (int) a;
 int b = b.intValue()
 를 통해 변환시킬 수 있다.
 
-array -> list
+[array -> list]
 List<String> list = Arrays.asList(arr);
+List list = new ArrayList(Arrays.asList(arr));
 
-ch -> string
+[list -> array]
+
+[ch -> string]
 String.valueOf(ch);
 str.toCharArray();
 
@@ -74,6 +77,8 @@ Arrays.sort(arr);
 Arrays.sort(arr, Collections.reverseOrder());
 오류 발생시 아래 예외 확인
 
+<리스트>
+List arrlist = new ArrayList();
 
 <mapping>
 java의 map
@@ -138,6 +143,11 @@ int to string to [string] , sum
 return Arrays.stream(String.valueOf(n).split(""))
     .mapToInt(Integer::parseInt)
     .sum();
+
+배열에서 원하는 값 출력
+return IntStream.rangeClosed(0, n)
+    .filter(value -> value % 2 == 1)
+    .toArray();
 
 ```
 
