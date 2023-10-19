@@ -45,6 +45,10 @@ List list = new ArrayList(Arrays.asList(arr));
 String.valueOf(ch);
 str.toCharArray();
 
+[ch -> int]
+(int)c = ascii코드로 인해 48 과 같은 숫자가 되어서 여기에 - 48을 해주거나
+Character.getNumericValue(c); -> 1,2,3 과 같이 반환된다.
+
 string -> array
 char[] arr = str.toCharArray();
 
