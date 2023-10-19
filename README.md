@@ -98,7 +98,8 @@ z = 122 Z = 90
 filter, map, reduce, find, match, sort등 고차함수들을
 컬렉션, 배열, I/O 자원
 
-import java.util.Arrays;
+Array.stream -> import java.util.Arrays;
+IntStream.rangeClosed() -> import java.util.stream.*;
 public static void main (String [I args) {
   int [] intArr = {1, 2, 3, 4, 5};
 
@@ -149,6 +150,10 @@ return IntStream.rangeClosed(0, n)
     .filter(value -> value % 2 == 1)
     .toArray();
 
+배열에서 조건에 따라 mapping하여 출력
+return Arrays.stream(arr)
+    .map(i -> k % 2 == 0 ? i + k : i * k)
+    .toArray();
 ```
 
 ## length, length(), size() 차이점
