@@ -158,6 +158,14 @@ return IntStream.rangeClosed(0, n)
 return Arrays.stream(arr)
     .map(i -> k % 2 == 0 ? i + k : i * k)
     .toArray();
+
+복잡하지만 삼항조건을 넣으면서까지도 가능하기도 하다
+i가 50보다 크거나 같으면서 짝수라면 /2 를
+i가 50보다 작거나 홀수라면 * 2를 하라.
+return Arrays.stream(arr)
+            .map(i -> i >= 50&&i%2 == 0 ?
+                i / 2 : i < 50&&i%2 != 0 ? i * 2 : i)
+            .toArray();
 ```
 
 ## length, length(), size() 차이점
