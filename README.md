@@ -66,6 +66,11 @@ Arrays.sort(arr);
 Arrays.sort(arr, Collections.reverseOrder());
 오류 발생시 아래 예외 확인
 
+
+<mapping>
+java의 map
+mapToInt(Integer::parseInt)
+
 ```
 
 ## 스트림에서 제공하는 기본 함수
