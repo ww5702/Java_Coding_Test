@@ -170,6 +170,13 @@ return Arrays.stream(arr)
             .map(i -> i >= 50&&i%2 == 0 ?
                 i / 2 : i < 50&&i%2 != 0 ? i * 2 : i)
             .toArray();
+
+음수를 처음 발견하면 해당 index return, 없다면 -1
+return IntStream.range(0, numList.length)
+      .filter(i -> numList[i] < 0)
+      .findFirst()
+      .orElse(-1);
+
 ```
 
 ## length, length(), size() 차이점
