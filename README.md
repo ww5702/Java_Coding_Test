@@ -92,6 +92,10 @@ Arrays.sort(arr, Collections.reverseOrder());
 바로 contains를 사용할수는 없고 list로 변환 후 사용 가능하다.
 Arrays.asList(arr).contains(n);
 
+배열 subarr
+잘라내는것이 아닌 복사
+Arrays.copyOfRange(arr, 1, 5);
+
 <리스트>
 List arrlist = new ArrayList();
 
