@@ -26,7 +26,7 @@ int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 
 [int -> double]
 double b = (double) a;  // 55.0
 double b = Double.valueOf(a);  // 55.0
-int -> string
+[int -> string]
 String s = Integer.toString(n);
 String s = String.valueOf(n);
 
@@ -54,6 +54,9 @@ char[] arr = str.toCharArray();
 string str = "happy birthday!"
 System.out.println(str.split("");  // h a p p y 띄어쓰기 b i r t h d a y !
 
+[string -> int]
+Integer a = Integer.valueOf(str);
+Integer a = Integer.parseInt(str);
 
 <소수점 올림, 반올림, 버림>
 Math함수를 이용해 해결한다.
@@ -84,6 +87,10 @@ Arrays.copyOfRange(arr, start, end+1);
 Arrays.sort(arr);
 Arrays.sort(arr, Collections.reverseOrder());
 오류 발생시 아래 예외 확인
+
+배열 contains
+바로 contains를 사용할수는 없고 list로 변환 후 사용 가능하다.
+Arrays.asList(arr).contains(n);
 
 <리스트>
 List arrlist = new ArrayList();
