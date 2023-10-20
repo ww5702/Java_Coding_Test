@@ -117,7 +117,7 @@ z = 122 Z = 90
 filter, map, reduce, find, match, sort등 고차함수들을
 컬렉션, 배열, I/O 자원
 
-Array.stream -> import java.util.Arrays;
+Arrays.stream -> import java.util.Arrays;
 IntStream.rangeClosed() -> import java.util.stream.*;
 public static void main (String [I args) {
   int [] intArr = {1, 2, 3, 4, 5};
