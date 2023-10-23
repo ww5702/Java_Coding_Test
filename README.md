@@ -74,6 +74,7 @@ str.trim();
 java의 배열은 크기를 정해줘야 한다.
 int[] answer = new int[arr.length]; 와 같이
 int[] answer = {1,2,3};
+int[] answer = IntStream.rangeClosed(0,n).toArray();
 
 배열 순환
 for (int i: arr) {
@@ -188,6 +189,16 @@ return IntStream.range(0, numList.length)
       .findFirst()
       .orElse(-1);
 
+곱셈을 return
+return Arrays.stream(intlist)
+    .reduce((acc, i) -> acc * i)
+    .getAsInt();
+
+짝수인 수들만 제곱해서 더하여 return
+return Arrays.stream(arr)
+    .filter(i -> i%2 != 0)
+    .map(i -> i * i)
+    .sum();
 ```
 
 ## length, length(), size() 차이점
