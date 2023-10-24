@@ -23,6 +23,10 @@ str.replaceAll("[aeiou]","") //sdf
 자르기
 str.charAt(i)
 
+시작하는가 끝나는가
+str.startsWith(str2) true / false
+str.endsWith(str2) true / false
+
 <형변환>   
 int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 32비트에 값을 저장한다는 것이다.
 
