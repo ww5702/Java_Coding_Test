@@ -19,6 +19,7 @@ replaceAll //asdf
 str.replaceAll("asdf,"22"); // 22
 여러개 지울때
 str.replaceAll("[aeiou]","") //sdf
+역도 가능 str.replaceAll("[^a-b]","") a~b빼고 다
 
 자르기
 str.charAt(i)
