@@ -100,6 +100,9 @@ Arrays.asList(arr).contains(n);
 잘라내는것이 아닌 복사
 Arrays.copyOfRange(arr, 1, 5);
 
+배열 복사 System.arraycopy
+System.arraycopy(num_list, 0, newarr, 0, num_list.length);
+
 <리스트>
 List arrlist = new ArrayList();
 
