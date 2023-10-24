@@ -60,7 +60,9 @@ Character.getNumericValue(c); -> 1,2,3 과 같이 반환된다.
 [string -> array]
 char[] arr = str.toCharArray();
 string str = "happy birthday!"
-System.out.println(str.split("");  // h a p p y 띄어쓰기 b i r t h d a y !
+System.out.println(str.split(""));
+\s 는 공백을 의미 \s+ 는 공백 여러개를 의미
+my_string.split("\\s+"); \ \s+ 를 붙여서 사용
 
 [string -> int]
 Integer a = Integer.valueOf(str);
