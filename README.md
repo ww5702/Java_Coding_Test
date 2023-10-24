@@ -46,8 +46,13 @@ int b = b.intValue()
 [array -> list]
 List<String> list = Arrays.asList(arr);
 List list = new ArrayList(Arrays.asList(arr));
+List<Integer> answer = new ArrayList<>();
+        for (int num : arr) {
+            answer.add(num);
+        }
 
 [list -> array]
+Integer[] arr = list.toArray(new Integer[list.size()]);
 
 [ch -> string]
 String.valueOf(ch);
@@ -122,6 +127,14 @@ char 값을 (int)c로 그저 출력해주면 그만
 a = 97  A = 65
 z = 122 Z = 90
 0~9 = 48~57
+
+<index 구하기>
+list.indexOf(i);
+
+```
+## int vs integer
+```
+배열은 int형으로 사용하고 리스트에서는 Integer형으로 알맞게 사용해야한다.
 ```
 
 ## 스트림에서 제공하는 기본 함수
