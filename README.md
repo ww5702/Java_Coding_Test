@@ -54,6 +54,9 @@ List<Integer> answer = new ArrayList<>();
 [list -> array]
 Integer[] arr = list.toArray(new Integer[list.size()]);
 
+[list -> int array]
+int[] answer = list.stream().mapToInt(i -> i).toArray();
+
 [ch -> string]
 String.valueOf(ch);
 str.toCharArray();
@@ -116,7 +119,11 @@ Arrays.copyOfRange(arr, 1, 5);
 System.arraycopy(num_list, 0, newarr, 0, num_list.length);
 
 <리스트>
-List arrlist = new ArrayList();
+List<String> arrlist = new ArrayList<>();
+
+추가
+arrList.add(str);
+arrList.add(0,str);
 
 <mapping>
 java의 map
@@ -135,6 +142,10 @@ list.indexOf(i);
 ## int vs integer
 ```
 배열은 int형으로 사용하고 리스트에서는 Integer형으로 알맞게 사용해야한다.
+int는 Primitive 자료형이다 즉 변수의 타입이다.
+integer는 매개변수로 객체가 필요할때, 기본형 값이 아닌 객체로 저장해야할때 사용한다.
+즉 int는 산술연상 가능, integer는 데이터를 wrapper할 경우에 사용
+
 ```
 
 ## 스트림에서 제공하는 기본 함수
