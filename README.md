@@ -236,6 +236,11 @@ return Arrays.stream(arr)
     .filter(i -> i%2 != 0)
     .map(i -> i * i)
     .sum();
+
+x를 기준으로 string을 나눠 o의 갯수만큼 배열 return
+return Arrays.stream(myString.split("x", myString.length()))
+            .mapToInt(x -> x.length())
+            .toArray();;
 ```
 
 ## length, length(), size() 차이점
