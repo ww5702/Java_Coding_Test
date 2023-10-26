@@ -125,6 +125,13 @@ List<String> arrlist = new ArrayList<>();
 arrList.add(str);
 arrList.add(0,str);
 
+정렬
+Collections.sort(list);
+Collections.sort(list, Collections.reverseOrder());
+// 대소문자 구분없이 오름차순, 내림차순 a A B c 이렇게
+Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
+Collections.sort(list, Collections.reverseOrder(String.CASE_INSENSITIVE_ORDER));
+
 <mapping>
 java의 map
 mapToInt(Integer::parseInt)
