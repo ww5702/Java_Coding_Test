@@ -51,6 +51,9 @@ List<Integer> answer = new ArrayList<>();
             answer.add(num);
         }
 
+[array -> string]
+String.valueOf(arr);
+
 [list -> array]
 Integer[] arr = list.toArray(new Integer[list.size()]);
 
