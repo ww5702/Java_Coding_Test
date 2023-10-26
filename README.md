@@ -28,6 +28,10 @@ str.charAt(i)
 str.startsWith(str2) true / false
 str.endsWith(str2) true / false
 
+string 비교
+== 쓰면 안된다
+str.equals("asdf") true / false
+
 <형변환>   
 int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 32비트에 값을 저장한다는 것이다.
 
