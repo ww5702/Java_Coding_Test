@@ -1,4 +1,4 @@
-# Java_Coding_Test
+`# Java_Coding_Test
 [Java][프로그래머스] 알고리즘 풀이
 
 ```
@@ -141,6 +141,7 @@ mapToInt(Integer::parseInt)
 
 <asciiCode>
 char 값을 (int)c로 그저 출력해주면 그만
+다시 돌아가는것 또한 (char)c 이다.
 a = 97  A = 65
 z = 122 Z = 90
 0~9 = 48~57
