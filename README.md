@@ -121,6 +121,10 @@ Arrays.copyOfRange(arr, 1, 5);
 배열 복사 System.arraycopy
 System.arraycopy(num_list, 0, newarr, 0, num_list.length);
 
+<2차원 배열>
+int[][] answer = {};
+int[][] answer = new int[2][2];
+
 <리스트>
 List<String> arrlist = new ArrayList<>();
 
