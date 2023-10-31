@@ -151,6 +151,11 @@ Collections.sort(list, Collections.reverseOrder());
 Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
 Collections.sort(list, Collections.reverseOrder(String.CASE_INSENSITIVE_ORDER));
 
+제거
+list.remove(1);        //index1 제거
+list.remove(Integer.valueOf(1));        // 값이 1인 첫번째값 제거
+list.removeAll(Arrays.asList(Integer.valueOf(1)) // 1전부 제거
+
 <mapping>
 java의 map
 mapToInt(Integer::parseInt)
