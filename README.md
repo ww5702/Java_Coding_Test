@@ -170,6 +170,15 @@ z = 122 Z = 90
 <index 구하기>
 list.indexOf(i);
 
+
+<Dictionary>
+import java.util.HashMap;
+HashMap<String, String> dict = new HashMap<String,String>();
+dict.put("aa","1");
+
+출력
+dict.get("aa");         // 1
+
 ```
 ## int vs integer
 ```
