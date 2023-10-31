@@ -300,7 +300,7 @@ sb.substring(1,2);       // a5
 sb.deleteCharAt(1);      // a5ca
 sb.delete(2, sb.length())// a5
 sb.toString();           // a5
-sb.reversed();           // 5a
+sb.reverse();           // 5a
  
 ```
 
