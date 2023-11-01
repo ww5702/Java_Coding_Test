@@ -45,6 +45,9 @@ double b = Double.valueOf(a);  // 55.0
 [int -> string]
 String s = Integer.toString(n);
 String s = String.valueOf(n);
+[int -> int array]
+int[] digits = Stream.of(String.valueOf(num).split(""))
+        .mapToInt(Integer::parseInt).toArray();
 
 [double -> int]
 int b = (int) a;
