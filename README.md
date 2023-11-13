@@ -150,6 +150,10 @@ List<String> arrlist = new ArrayList<>();
 arrList.add(str);
 arrList.add(0,str);
 
+index
+list.indexOf(2);                // firstIndex
+list.lastIndexOf(2);            // lastIndex
+
 정렬
 Collections.sort(list);
 Collections.sort(list, Collections.reverseOrder());
