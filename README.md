@@ -136,6 +136,9 @@ System.arraycopy(num_list, 0, newarr, 0, num_list.length);
 swift joined 처럼 String.joined("",arr); 로 합쳐서 string으로
 출력해줄 수 있다.
 
+배열 채우기 fill
+Arrays.fill(arr, 0);         //0으로 배열 채우기
+
 <2차원 배열>
 int[][] answer = {};
 int[][] answer = new int[2][2];
