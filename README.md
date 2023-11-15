@@ -368,3 +368,12 @@ primitive타입에 대한 comparator가 없기 때문인데
 따라서 int[]를 integer[]로 바꾸면 사용이 가능하다
 Integer[] newArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
 ```
+## 2진수 10진수 등등 진수변환
+```
+2진수, 8진수등을 다시 숫자로 변환
+int num = Integer.parseInt(value,2);
+int num = Integer.parseInt(value,8);
+
+(String)숫자를 2진수로 8진수 등등 원하는 진수로 변환
+String num = Integer.toBinaryString(value);
+```
