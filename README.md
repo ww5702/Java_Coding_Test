@@ -142,6 +142,12 @@ Arrays.fill(arr, 0);         //0으로 배열 채우기
 배열 출력
 Arrays.toString(arr);
 
+배열의 비교
+배열의 비교 또한 == 연산자가 아닌
+if (Arrays.equals(arr1, arr2)) {break;}
+와 같이 사용해야 한다.
+== 연산자는 해당 배열의 주소값을 가져오기에 같이라고 판단하지 않는다.
+
 <2차원 배열>
 int[][] answer = {};
 int[][] answer = new int[2][2];
