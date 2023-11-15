@@ -65,6 +65,9 @@ List<Integer> answer = new ArrayList<>();
 [array -> string]
 String.valueOf(arr);
 
+[integer array -> int array]
+int[] answer = Arrays.stream(arr).mapToInt(i -> i).toArray();
+
 [list -> array]
 Integer[] arr = list.toArray(new Integer[list.size()]);
 
@@ -208,6 +211,10 @@ HashSet<Integer> set = new HashSet<Integer>();
 
 추가
 set.add(1);
+
+형 변환
+Integer[] arr = set.toArray(new Integer[0]);
+
 
 ```
 ## int vs integer
