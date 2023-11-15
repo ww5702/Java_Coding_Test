@@ -196,6 +196,13 @@ dict.put("aa","1");
 출력
 dict.get("aa");         // 1
 
+<Set>
+import java.util.*;
+HashSet<Integer> set = new HashSet<Integer>();
+
+추가
+set.add(1);
+
 ```
 ## int vs integer
 ```
