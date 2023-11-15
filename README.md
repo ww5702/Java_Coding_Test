@@ -100,10 +100,13 @@ Math.ceil(pie) // 4 올림
 Math.round(pie) // 3 반올림
 Math.floor(pie) // 3 버림
 
-<대문자, 소문자, 앞뒤로 공백제거>
+<대문자, 소문자, 앞뒤로 공백제거> - str
 str.toUpperCase();
 str.toLowerCase();
 str.trim();
+<대소문자> - char
+Character.toUpperCase(char);
+Character.toLowerCase(char);
 
 <배열>
 java의 배열은 크기를 정해줘야 한다.
