@@ -139,6 +139,9 @@ swift joined 처럼 String.joined("",arr); 로 합쳐서 string으로
 배열 채우기 fill
 Arrays.fill(arr, 0);         //0으로 배열 채우기
 
+배열 출력
+Arrays.toString(arr);
+
 <2차원 배열>
 int[][] answer = {};
 int[][] answer = new int[2][2];
@@ -165,6 +168,10 @@ Collections.sort(list, Collections.reverseOrder(String.CASE_INSENSITIVE_ORDER));
 list.remove(1);        //index1 제거
 list.remove(Integer.valueOf(1));        // 값이 1인 첫번째값 제거
 list.removeAll(Arrays.asList(Integer.valueOf(1)) // 1전부 제거
+
+출력
+list.toString();
+
 
 <mapping>
 java의 map
