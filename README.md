@@ -165,6 +165,9 @@ List<String> arrlist = new ArrayList<>();
 arrList.add(str);
 arrList.add(0,str);
 
+출력
+list.get(0);
+
 index
 list.indexOf(2);                // firstIndex
 list.lastIndexOf(2);            // lastIndex
@@ -183,6 +186,11 @@ list.removeAll(Arrays.asList(Integer.valueOf(1)) // 1전부 제거
 
 출력
 list.toString();
+
+isEmpty
+list.isEmpty();
+
+
 
 
 <mapping>
