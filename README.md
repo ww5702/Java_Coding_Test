@@ -358,7 +358,7 @@ sb.deleteCharAt(1);      // a5ca
 sb.delete(2, sb.length())// a5
 sb.toString();           // a5
 sb.reverse();           // 5a
- 
+sb.charAt(0);           // 5
 ```
 
 ## Collection의 element를 제거할때 주의할점
