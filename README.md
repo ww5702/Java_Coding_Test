@@ -332,6 +332,21 @@ return Arrays.stream(myString.split("x", myString.length()))
             .toArray();;
 ```
 
+## 입출력 
+```
+// Scanner 클래스 불러오기
+import java.util.Scanner;
+
+// Scanner 클래스의 인스턴스 생성하기
+Scanner scanner = new Scanner(System.in);
+// nextLine() 메서드를 통해 입력 값 변수에 저장하기
+String inputValue = scanner.nextLine();
+
+nextLine() : 문자열을 입력받는 메서드
+nextInt() : 정수형 데이터를 입력받는 메서드
+netxFloat() : 실수형 데이터를 입력받는 메서드
+```
+
 ## length, length(), size() 차이점
 ```
 length
