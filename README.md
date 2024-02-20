@@ -291,6 +291,11 @@ return Arrays.stream(String.valueOf(n).split(""))
     .mapToInt(Integer::parseInt)
     .sum();
 
+string[] to int[]
+return Arrays.stream(strArr)
+        .mapToInt(Integer::parseInt)
+        .toArray();
+
 배열에서 원하는 값 출력
 return IntStream.rangeClosed(0, n)
     .filter(value -> value % 2 == 1)
