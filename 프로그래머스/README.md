@@ -5,6 +5,10 @@
 - x만큼 간격이 있는 n개의 숫자
 - 평균 구하기
 - 자릿수 더하기
+- 문자열을 정수로 바꾸기
+- 자연수 뒤집어 배열로 만들기
+- 문자열 내 p와 y의 개수
+- 정수 제곱근 판별
 - 
 # [Level 2](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202)
 - 최댓값과 최솟값
