@@ -90,6 +90,10 @@ System.out.println(str.split(""));
 \s 는 공백을 의미 \s+ 는 공백 여러개를 의미
 my_string.split("\\s+"); \ \s+ 를 붙여서 사용
 
+str.chars(); 와 같이도 가능
+s.chars().filter( e -> 'Y' == e).count();
+와 같이 활용 가능
+
 [string -> int]
 Integer a = Integer.valueOf(str);
 Integer a = Integer.parseInt(str);
