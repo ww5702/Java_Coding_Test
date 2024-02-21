@@ -19,3 +19,18 @@ class Solution {
     }
 }
 ```
+두 방법 모두 가능   
+```
+
+import java.util.Arrays;
+import java.util.stream.*;
+class Solution {
+    boolean solution(String s) {
+        s.toUpperCase();
+        long p = s.chars().filter( e -> 'P'== e).count();
+        long y = s.chars().filter( e -> 'Y'== e).count();
+        
+        return p == y ? true : false;
+    }
+}
+```
