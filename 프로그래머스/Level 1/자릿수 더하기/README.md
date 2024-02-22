@@ -1,13 +1,16 @@
 ```
 import java.util.*;
-import java.util.Arrays;
-import java.util.stream.*;
+class Solution {
+    public long solution(long n) {
+        String[] list = String.valueOf(n).split("");
+        Arrays.sort(list);
 
-public class Solution {
-    public int solution(int n) {
-        int[] answer = Stream.of(String.valueOf(n).split("")).mapToInt(Integer::parseInt).toArray();
-        //System.out.println(Arrays.toString(answer));
-        return Arrays.stream(answer).sum();
+        StringBuilder sb = new StringBuilder();
+        for (String num : list)  {
+            sb.append(num);
+        }
+        sb.reverse();
+        return Long.parseLong(sb.toString());
     }
 }
 ```
