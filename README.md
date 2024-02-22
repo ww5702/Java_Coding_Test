@@ -108,6 +108,10 @@ Math.ceil(pie) // 4 올림
 Math.round(pie) // 3 반올림
 Math.floor(pie) // 3 버림
 
+<max,min>
+Math.max(a,b)
+Math.min(a,b)
+
 <대문자, 소문자, 앞뒤로 공백제거> - str
 str.toUpperCase();
 str.toLowerCase();
