@@ -98,6 +98,9 @@ s.chars().filter( e -> 'Y' == e).count();
 Integer a = Integer.valueOf(str);
 Integer a = Integer.parseInt(str);
 
+[string -> long]
+long num = Long.parseLong(str);
+
 <소수점 올림, 반올림, 버림>
 Math함수를 이용해 해결한다.
 double pie = 3.141592;
