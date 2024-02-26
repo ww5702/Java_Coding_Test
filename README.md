@@ -427,5 +427,9 @@ int num = Integer.parseInt(value,2);
 int num = Integer.parseInt(value,8);
 
 (String)숫자를 2진수로 8진수 등등 원하는 진수로 변환
+"4" -> "110" 으로 string -> string
+2 진수
 String num = Integer.toBinaryString(value);
+8 진수 Integer.toOctalString(i);
+16진수 Integer.toHexString(i);
 ```
