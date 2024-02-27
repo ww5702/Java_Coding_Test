@@ -45,6 +45,9 @@ double b = Double.valueOf(a);  // 55.0
 [int -> string]
 String s = Integer.toString(n);
 String s = String.valueOf(n);
+[int -> long]
+Long l = new Long(num);
+Long l = Long.valueOf(num);
 [int -> int array]
 import java.util.stream.*;
 int[] digits = Stream.of(String.valueOf(num).split(""))
