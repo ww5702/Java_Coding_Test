@@ -435,4 +435,8 @@ int num = Integer.parseInt(value,8);
 String num = Integer.toBinaryString(value);
 8 진수 Integer.toOctalString(i);
 16진수 Integer.toHexString(i);
+
+true 인 값을 찾을 수 있는 bitCount
+int a = Integer.bitCount(num);
+1101 -> 3 
 ```
