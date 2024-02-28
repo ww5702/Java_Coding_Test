@@ -431,12 +431,15 @@ Integer[] newArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
 int num = Integer.parseInt(value,2);
 int num = Integer.parseInt(value,8);
 
+
 (String)숫자를 2진수로 8진수 등등 원하는 진수로 변환
 "4" -> "110" 으로 string -> string
 2 진수
 String num = Integer.toBinaryString(value);
 8 진수 Integer.toOctalString(i);
 16진수 Integer.toHexString(i);
+3 진수 String threeJin = Integer.toString(n,3);
+위와 같이 3을 2,3,4,5,6 등으로 응용 가능
 
 true 인 값을 찾을 수 있는 bitCount
 int a = Integer.bitCount(num);
