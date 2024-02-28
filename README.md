@@ -205,6 +205,8 @@ list.toString();
 isEmpty
 list.isEmpty();
 
+contains
+list.contains("a")
 
 
 
