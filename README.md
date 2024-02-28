@@ -445,3 +445,27 @@ true 인 값을 찾을 수 있는 bitCount
 int a = Integer.bitCount(num);
 1101 -> 3 
 ```
+## 스택
+```
+import java.util.Stack;
+
+push
+stack.push(c);
+stack.add(c);
+
+pop
+stack.pop();
+
+peek = last!
+stack.peek();
+만약 비었을시 오류
+
+isEmpty
+stack.isEmpty();
+
+search
+스택에서 해당 위치를 반환한다. 이때 반환하는 index는 빠져나올 순서를 의미한다.
+없다면 -1을 뽑아내고, 여러개라면 가장 먼저 빠져나올 인덱스가 나온다.
+stack.search(num);
+
+```
