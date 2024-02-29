@@ -34,6 +34,11 @@
 - 예산
 - 이상한 문자 만들기
 - 크기가 작은 부분 문자열
+- 삼총사
+- 최소직사각형
+- 시저 암호
+- 가장 가까운 같은 글자
+- 숫자 문자열과 영단어
 - 
 # [Level 2](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202)
 - 최댓값과 최솟값
