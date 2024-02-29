@@ -33,8 +33,9 @@ string 비교
 str.equals("asdf") true / false
 
 index찾기
-abcde
-str.indexOf("b") // 1
+abcdbe
+str.indexOf("b") // 앞에서 b = 1
+str.lastIndexOf("b") // 뒤에서 b = 4
 
 <형변환>   
 int와 double의 차이점은 Double은 64비트에 값을 저장하고, Int는 32비트에 값을 저장한다는 것이다.
