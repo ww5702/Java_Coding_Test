@@ -122,6 +122,9 @@ str.trim();
 <대소문자> - char
 Character.toUpperCase(char);
 Character.toLowerCase(char);
+대소문자인지 확인
+Character.isUppcerCase(char);
+Character.isLowerCase(char);
 
 <배열>
 java의 배열은 크기를 정해줘야 한다.
