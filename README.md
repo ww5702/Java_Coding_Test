@@ -3,7 +3,8 @@
 ```
 반환형을 public int[] solution에서
 publis List solution으로 바꿔도 된다는 사실
-런타임 에러가 발생할 경우 -> 범위의 초과 -> for문 확인 혹은 int -> long으로 변환
+런타임 에러가 발생할 경우 -> 범위의 초과
+따라서 for문 확인 혹은 int -> long으로 변환해보기
 ```
 
 ```
