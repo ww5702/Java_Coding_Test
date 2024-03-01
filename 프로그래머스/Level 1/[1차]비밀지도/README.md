@@ -25,3 +25,24 @@ class Solution {
     }
 }
 ```
+풀이를 보았을 때 result[i] = Integer.toBinaryString(arr1[i] | arr2[i]);   
+를 사용하는것이 완벽한 의도 같았다.   
+```
+import java.util.Arrays;
+class Solution {
+    public String[] solution(int n, int[] arr1, int[] arr2) {
+        String[] answer = new String[n];
+        String[] result = new String[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = Integer.toBinaryString(arr1[i] | arr2[i]);
+        }
+        //System.out.println(Arrays.toString(result));
+        for (int i = 0; i < n; i++) {
+            result[i] = String.format("%"+n+"s",result[i]);
+            result[i] = result[i].replaceAll("1", "#");
+            result[i] = result[i].replaceAll("0", " ");
+        }
+        return result;
+    }
+}
+```
