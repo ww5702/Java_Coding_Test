@@ -453,7 +453,13 @@ String num = Integer.toBinaryString(value);
 
 true 인 값을 찾을 수 있는 bitCount
 int a = Integer.bitCount(num);
-1101 -> 3 
+1101 -> 3
+
+Integer.toBinaryString(arr1[i] | arr2[i])
+11000
+ 0100
+이 두개를 위의 문법으로 사용할 경우
+11100으로 반환된다.   
 ```
 ## 스택
 ```
