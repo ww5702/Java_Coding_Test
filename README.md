@@ -1,5 +1,9 @@
 # Java_Coding_Test
 [Java][프로그래머스] 알고리즘 풀이
+```
+반환형을 public int[] solution에서
+publis List solution으로 바꿔도 된다는 사실
+```
 
 ```
 <str>
