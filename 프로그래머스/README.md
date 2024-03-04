@@ -44,6 +44,11 @@
 - 문자열 내 마음대로 정렬하기
 - 두 개 뽑아서 더하기
 - [1차] 비밀지도
+- 콜라 문제
+- 추억 점수
+- 명예의 전당(1)
+- 카드 뭉치
+- 2016년
 - 
 # [Level 2](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202)
 - 최댓값과 최솟값
