@@ -427,6 +427,7 @@ List<String> list = new ArrayList<>(Arrays.asList(s1));
 java.util.ArrayList로 감쌀때
 성공하는 모습을 확인할 수 있다.
 
+쉽게 생각하면 고정된 배열값을 list로 만들어주어 삭제할 수 없다는 오류가 나온것이다.
 Arrays.asList는 구현되어 있지 않아 상위객체인 AbstractList에서 throw Exception 처리를 한것이다. 
 ```
 ## int배열 내림차순 오류
