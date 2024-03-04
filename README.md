@@ -490,3 +490,31 @@ search
 stack.search(num);
 
 ```
+## 우선순위 큐
+```
+FIFO로 우선순위가 높은 데이터가 먼저 나간다.
+import java.util.PriorityQueue;
+//낮은 숫자가 우선 순위인 int 형 우선순위 큐 선언
+PriorityQueue<Integer> priorityQueueLowest = new PriorityQueue<>();
+//높은 숫자가 우선 순위인 int 형 우선순위 큐 선언
+PriorityQueue<Integer> priorityQueueHighest = new PriorityQueue<>(Collections.reverseOrder());
+
+push
+priorityQueue.add(1);
+priorityQueue.offer(10);
+
+pop
+// 첫번째 값을 반환하고 제거 비어있다면 null
+priorityQueue.poll();
+// 첫번째 값 제거 비어있다면 예외 발생
+priorityQueue.remove();
+
+// 첫번째 값을 반환만 하고 제거 하지는 않는다.
+// 큐가 비어있다면 null을 반환
+priorityQueue.peek();
+// 첫번째 값을 반환만 하고 제거 하지는 않는다.
+// 큐가 비어있다면 예외 발생
+priorityQueue.element();
+// 초기화
+priorityQueue.clear();      
+```
