@@ -179,6 +179,11 @@ if (Arrays.equals(arr1, arr2)) {break;}
 와 같이 사용해야 한다.
 == 연산자는 해당 배열의 주소값을 가져오기에 같이라고 판단하지 않는다.
 
+배열 firstindex
+배열 그 자체로는 firstIndexOf를 사용할 수 없다.
+int index = Arrays.asList(name).indexOf(p);
+따라서 list로 변환후 사용이 가능하다.
+
 <2차원 배열>
 int[][] answer = {};
 int[][] answer = new int[2][2];
