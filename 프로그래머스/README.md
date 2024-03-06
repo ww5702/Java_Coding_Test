@@ -54,6 +54,10 @@
 - 모의고사
 - 기사단원의 무기
 - 소수 만들기
+- 소수 찾기
+- 덧칠하기
+- 실패율
+- 옹알이(2)
 - 
 # [Level 2](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202)
 - 최댓값과 최솟값
