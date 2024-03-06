@@ -188,6 +188,25 @@ int index = Arrays.asList(name).indexOf(p);
 int[][] answer = {};
 int[][] answer = new int[2][2];
 
+출력
+Arrays.deepToString(arr)
+
+정렬
+Arrays.sort(failure, (o1, o2) -> {
+            if(o1[1] == o2[1]) {
+                return Double.compare(o1[0], o2[0]);
+            } else {
+                return Double.compare(o2[1], o1[1]);
+            }
+        });
+만약 [1]값들이 같다면 [0]의 조건들로 오름차순, 아니라면[1]의 조건으로 오름차순
+
+o2 - o1 = 내림차순
+o1 - o2 = 오름차순
+Arrays.sort(failure, (o1,o2) -> (o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o2[0]));
+람다식으로도 가능
+
+
 <리스트>
 List<String> arrlist = new ArrayList<>();
 
