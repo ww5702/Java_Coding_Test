@@ -58,6 +58,10 @@
 - 덧칠하기
 - 실패율
 - 옹알이(2)
+- [1차] 다트 게임
+- 로또의 최고 순위와 최저 순위
+- 문자열 나누기
+- 숫자 짝꿍
 - 
 # [Level 2](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202)
 - 최댓값과 최솟값
