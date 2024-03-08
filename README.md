@@ -265,9 +265,17 @@ list.indexOf(i);
 import java.util.HashMap;
 HashMap<String, String> dict = new HashMap<String,String>();
 dict.put("aa","1");
+HashMap<String, Integer> map = new HashMap<>();
+map.put("asdf", map.getOrDefault("asdf", 0) + 1);
+-> asdf라는 string을 저장하는데 만약 없던 값이라면 0으로 초기화 후 +1하여 저장
 
 출력
 dict.get("aa");         // 1
+
+전체 순환
+map.forEach((key, value) -> {
+            System.out.println(""+key+" "+value);
+        });
 
 <Set>
 import java.util.*;
