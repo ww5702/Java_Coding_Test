@@ -67,6 +67,7 @@ int b = b.intValue()
 
 [array -> list]
 List<String> list = Arrays.asList(arr);
+-> string은 되고 integer은 안됨
 List list = new ArrayList(Arrays.asList(arr));
 List<Integer> answer = new ArrayList<>();
         for (int num : arr) {
