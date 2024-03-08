@@ -277,6 +277,15 @@ map.forEach((key, value) -> {
             System.out.println(""+key+" "+value);
         });
 
+2번째 방법
+for ( Map.Entry<String, Integer> entry : map.entrySet()) {
+            if (entry.getValue() != 0) {
+                answer = entry.getKey();
+                break;
+            }
+}
+이 방법이 변수를 바꿔줄수도 break를 걸수도 있어 편하다.
+
 <Set>
 import java.util.*;
 HashSet<Integer> set = new HashSet<Integer>();
