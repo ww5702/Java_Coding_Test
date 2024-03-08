@@ -68,6 +68,7 @@ int b = b.intValue()
 [array -> list]
 List<String> list = Arrays.asList(arr);
 -> string은 되고 integer은 안됨
+-> 단 위와 같이 리스트를 만들 경우 고정되어 있어 원소를 제거 할 수 없다.
 List list = new ArrayList(Arrays.asList(arr));
 List<Integer> answer = new ArrayList<>();
         for (int num : arr) {
