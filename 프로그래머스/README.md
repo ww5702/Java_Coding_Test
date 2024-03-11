@@ -65,6 +65,9 @@
 - 대충 만든 자판
 - 체육복
 - 완주하지 못한 선수
+- 둘만의 암호
+- [PCCE 기출문제] 9번 / 이웃한 칸
+- 햄버거 만들기
 - 
 # [Level 2](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202)
 - 최댓값과 최솟값
