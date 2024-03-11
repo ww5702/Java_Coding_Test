@@ -509,6 +509,8 @@ Integer.toBinaryString(arr1[i] | arr2[i])
 ```
 import java.util.Stack;
 
+Stack<Integer> stackInt = new Stack<>();
+
 push
 stack.push(c);
 stack.add(c);
