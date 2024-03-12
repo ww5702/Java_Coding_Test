@@ -70,6 +70,7 @@
 - 햄버거 만들기
 - 크레인 인형뽑기 게임
 - 키패드 누르기
+- 성격 유형 검사하기
 - 
 # [Level 2](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202)
 - 최댓값과 최솟값
