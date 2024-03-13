@@ -28,6 +28,8 @@ str.replaceAll("[aeiou]","") //sdf
 역도 가능 str.replaceAll("[^a-b]","") a~b빼고 다
 str.replaceAll("[^a-z0-9._-]","") a~z, 0~9, . _ - 빼고 다 
 str.replaceAll("[.]{2,}","."); .이 2번이상 반복된것을 . 하나로
+[replaceAll 표현식](https://zhfvkq.tistory.com/5#:~:text=[JAVA]%20%EC%A0%95%EA%B7%9C%20%ED%91%9C%ED%98%84%EC%8B%9D(replaceAll)%20*%20%2D%20%EB%8C%80%EC%83%81%20%EB%AC%B8%EC%9E%90%EC%97%B4,:%20str.replaceAll(%22[%5E0%2D9]%22%2C%22%22);%20*%20%EC%88%AB%EC%9E%90%20%EC%A0%9C%EA%B1%B0%20:%20str.replaceAll(%22[0%2D9]%22%2C%22%22);)
+
 
 자르기
 str.charAt(i)
