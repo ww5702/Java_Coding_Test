@@ -221,10 +221,12 @@ Arrays.sort(failure, (o1,o2) -> (o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o2[0])
 
 <리스트>
 List<String> arrlist = new ArrayList<>();
+List<int []> 2list = new ArrayList<>(); 2차원리스트
 
 추가
 arrList.add(str);
 arrList.add(0,str);
+2list.add(1차원배열);
 
 출력
 list.get(0);
