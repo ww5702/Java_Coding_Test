@@ -27,6 +27,7 @@ str.replaceAll("asdf,"22"); // 22
 str.replaceAll("[aeiou]","") //sdf
 역도 가능 str.replaceAll("[^a-b]","") a~b빼고 다
 str.replaceAll("[^a-z0-9._-]","") a~z, 0~9, . _ - 빼고 다 
+str.replaceAll("[.]{2,}","."); .이 2번이상 반복된것을 . 하나로
 
 자르기
 str.charAt(i)
