@@ -74,6 +74,9 @@
 - 신규 아이디 추천
 - [PCCE 기출문제] 10번 / 데이터 분석
 - 바탕화면 정리
+- 개인정보 수집 유효기간
+- 달리기 경주
+- 공원 산책
 - 
 # [Level 2](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%202)
 - 최댓값과 최솟값
