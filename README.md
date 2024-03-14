@@ -104,6 +104,11 @@ string str = "happy birthday!"
 System.out.println(str.split(""));
 \s 는 공백을 의미 \s+ 는 공백 여러개를 의미
 my_string.split("\\s+"); \ \s+ 를 붙여서 사용
+split(".")은 작동을 안하다.
+. 은 무작위 한글자를 의미하므로
+이스케이프 문자인\을 넣어야하고, String안에서 이스케이프 문자를 써주려면
+\를 또 넣어줘야 한다.
+따라서 split("\\.")이어야 한다.
 
 str.chars(); 와 같이도 가능
 s.chars().filter( e -> 'Y' == e).count();
