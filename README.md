@@ -372,6 +372,7 @@ int[] result = Arrays.stream(numbers)
 int[] result = Arrays.streama(numbers)
     .distinct()
     .toArray();
+List<String> distinct_id_list = Arrays.stream(report).distinct().collect(Collectors.toList());
 
 int to string to [string] , sum
 return Arrays.stream(String.valueOf(n).split(""))
