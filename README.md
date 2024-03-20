@@ -303,6 +303,10 @@ for ( Map.Entry<String, Integer> entry : map.entrySet()) {
 }
 이 방법이 변수를 바꿔줄수도 break를 걸수도 있어 편하다.
 
+정렬
+list로 변환후 정렬할수도 있고 tree로도 정렬할 수 있다
+stream또한 가능
+
 <Set>
 import java.util.*;
 HashSet<Integer> set = new HashSet<Integer>();
