@@ -598,4 +598,17 @@ public int lcm(int a, int b) {
 ```
 
 ```
+## Iterator 
+```
+자바 컬렉션에 저장되어 있는 요소들을 순회하는 인터페이스이다.
+컬렉션 프레임워크에 공통으로 사용이 가능하고 사용법이 간단하기에 사용한다.
+Iterator<T> iterator = Collection.iterator();
+사용가능한 메서드는
+hasNext(), next(), remove()가 끝이다.
+ex)
+Iterator<Integer> it = list.values().iterator();
+while(it.hasNext()) {
+        answer *= it.next();
+}
+```
    
