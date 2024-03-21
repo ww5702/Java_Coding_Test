@@ -6,6 +6,17 @@ publis List solution으로 바꿔도 된다는 사실
 런타임 에러가 발생할 경우 -> 범위의 초과
 따라서 for문 확인 혹은 int -> long으로 변환해보기
 ```
+```
+함수를 밑에서 또 선언할때
+public static boolean visited[];
+public int solution() {
+        visited = new boolean[3];
+        ~~~;
+}
+public static void ~~~() {
+}
+위와 같이 선언해줘야 변수를 쓸 수 있다.
+```
 
 ```
 <str>
