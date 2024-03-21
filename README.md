@@ -306,6 +306,14 @@ for ( Map.Entry<String, Integer> entry : map.entrySet()) {
 정렬
 list로 변환후 정렬할수도 있고 tree로도 정렬할 수 있다
 stream또한 가능
+List<String> keySet = new ArrayList<>(map.keySet());
+key값을 기준으로 오름차순, 내림차순
+Collections.sort(keySet);
+Collections.reverse(keyset);
+value값을 기준으로 오름차순, 내림차순
+keySet.sort((o1, o2) -> map.get(o1).compareTo(map.get(o2)));
+keySet.sort((o1, o2) -> map.get(o2).compareTo(map.get(o1)));
+
 
 <Set>
 import java.util.*;
