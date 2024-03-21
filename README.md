@@ -325,6 +325,11 @@ value값을 기준으로 오름차순, 내림차순
 keySet.sort((o1, o2) -> map.get(o1).compareTo(map.get(o2)));
 keySet.sort((o1, o2) -> map.get(o2).compareTo(map.get(o1)));
 
+합치기
+map2를 map1에 각각 더해주기
+map2.forEach((key, value) -> map1.merge(key, value, (v1,v2) -> v1 + v2));
+map1에 map2의 값이 있다면 덮어씌우고 없다면 추가
+map2.forEach((key, value) -> map1.merge(key, value, (v1, v2) -> v2));
 
 <Set>
 import java.util.*;
