@@ -15,7 +15,7 @@ public int solution() {
 }
 public static void ~~~() {
 }
-위와 같이 선언해줘야 변수를 쓸 수 있다.
+위와 같이 선언해줘야 변수를 쓸 수 있다.  
 ```
 
 ```
