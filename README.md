@@ -300,6 +300,16 @@ map.put("asdf", map.getOrDefault("asdf", 0) + 1);
 출력
 dict.get("aa");         // 1
 
+contains
+hashMap.containsKey("A");
+hashMap.containsValue("BANANA")
+
+삭제
+testMap.remove("red");
+testMap.clear(); 전체 삭제
+
+
+
 전체 순환
 map.forEach((key, value) -> {
             System.out.println(""+key+" "+value);
@@ -341,7 +351,7 @@ set.add(1);
 
 형 변환
 Integer[] arr = set.toArray(new Integer[0]);
-
+Set<String>set = new HashSet<>(list);
 
 ```
 ## int vs integer
