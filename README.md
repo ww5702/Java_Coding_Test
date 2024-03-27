@@ -654,4 +654,25 @@ while(it.hasNext()) {
         answer *= it.next();
 }
 ```
-   
+## Pattern 클래스
+자바의 정규 표현식이 컴파일된 클래스이다.   
+```
+import java.util.regex.*;
+Pattern p = Pattern.compile("a...b");
+일정한 패턴의 조건에 일치하는 문자열을 찾는 것이다.
+
+Pattern pat = Pattern.compile("정규식") -> 패턴을 정의한 후
+Matcher match = pat.matcher("여기에 조사할 문자열") -> 정의된 패턴에 매치 되는 값을 저장한다
+match.find() -> 매치된 값이 있다면true, 아니라면 false 이다
+match.group() -> 매치된 값을 반환한다.
+
+Pattern p = Pattern.compile("([a-z\\s.-]+)([0-9]{1,5})");
+라고 했을때 위는
+a~z까지와 - , . 이 포함된 그룹하나
+0~9까지 1~5번 포함된 그룹둘 이라는 뜻이다.
+img250 이 있을때
+Matcher m = p.matcher("img250".toLowerCase());
+m.find();
+System.out.println(m.group(2));
+이라면 m.find()가 true이고, group2인 250이 반환된다.   
+```
