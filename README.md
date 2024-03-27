@@ -234,6 +234,14 @@ o1 - o2 = 오름차순
 Arrays.sort(failure, (o1,o2) -> (o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o2[0]));
 람다식으로도 가능
 
+복사
+int[][] dp = land 와 같이 한다면 얕은복사가 되어
+값이 변경되면 같이 변경된다 따라서 깊은 복사를 사용해야 한다.
+int[][] dp = new int[land.length][land[0].length];
+for (int i = 0; i < land.length; i++) {
+        dp[i] = land[i].clone();
+}
+
 
 <리스트>
 List<String> arrlist = new ArrayList<>();
