@@ -624,6 +624,15 @@ priorityQueue.element();
 // 초기화
 priorityQueue.clear();      
 ```
+## 큐
+```
+import java.util.LinkedList; //import
+import java.util.Queue; //import
+Queue<Integer> queue = new LinkedList<>(); //int형 queue 선언, linkedlist 이용
+Queue<String> queue = new LinkedList<>(); //String형 queue 선언, linkedlist 이용
+
+메서드들은 우선순위 큐와 같다. 
+```
 ## 유클리드 호제법
 ```
 최대공약수
