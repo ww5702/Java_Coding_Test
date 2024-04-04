@@ -252,6 +252,9 @@ arrList.add(str);
 arrList.add(0,str);
 2list.add(1차원배열);
 
+변경
+list.set(0, 3);
+
 출력
 list.get(0);
 
