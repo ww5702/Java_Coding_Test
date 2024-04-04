@@ -608,6 +608,9 @@ PriorityQueue<Integer> priorityQueueLowest = new PriorityQueue<>();
 //높은 숫자가 우선 순위인 int 형 우선순위 큐 선언
 PriorityQueue<Integer> priorityQueueHighest = new PriorityQueue<>(Collections.reverseOrder());
 
+  //2차원배여롤 이루어진 큐에서 [1]을 기준으로 오름차순
+PriorityQueue<int[]> q = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+
 push
 priorityQueue.add(1);
 priorityQueue.offer(10);
