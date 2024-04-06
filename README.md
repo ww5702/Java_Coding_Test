@@ -17,6 +17,18 @@ public static void ~~~() {
 }
 위와 같이 선언해줘야 변수를 쓸 수 있다.  
 ```
+```
+java에서의 구조체
+class Point {
+    int end;
+    int cost;
+    
+    public Point(int end, int cost) {
+        this.end = end;
+        this.cost = cost;
+    }
+}
+```
 
 ```
 <str>
