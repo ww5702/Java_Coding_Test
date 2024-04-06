@@ -258,11 +258,13 @@ for (int i = 0; i < land.length; i++) {
 <리스트>
 List<String> arrlist = new ArrayList<>();
 List<int []> 2list = new ArrayList<>(); 2차원리스트
+ArrayList<Point>[] listPoint = new ArrayList[N+1]; 구조체를 2차원리스트로 선언
 
 추가
 arrList.add(str);
 arrList.add(0,str);
 2list.add(1차원배열);
+listPoint.add(new Point(1,0)); 
 
 변경
 list.set(0, 3);
