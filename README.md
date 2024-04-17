@@ -29,7 +29,17 @@ class Point {
     }
 }
 ```
-
+```
+dfs에서 배열추가하여 재귀는 안되므로
+dfs(int[] arr, int cnt) {
+  if (cnt == k) { return; }
+  for (int i = 0; i < n; i++) {
+        arr[cnt] = i;
+        dfs(arr, cnt+1);
+  }
+와 같이 하자
+}
+```
 ```
 <str>
 추가(append)
