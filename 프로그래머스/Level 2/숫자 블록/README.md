@@ -47,3 +47,49 @@ class Solution {
     }
 }
 ```
+따라서 자기자신을 제외한 약수중 최대값을 return하는 함수를 만들어 풀이해준다.  n이 1인 경우는 0   
+n이 소수인 경우는 1    
+n의 약수 중 10^7 이하인 가장 큰 수   
+로 풀이하면 된다.   
+```
+import java.util.Arrays;
+import java.util.*;
+class Solution {
+    public int[] solution(long begin, long end) {
+        int[] answer = new int[(int)(end - begin) + 1];
+
+        for (int i = (int)begin,idx = 0; i <= end; i++) {
+            answer[idx++] = calculate(i);
+        }
+
+        return answer;
+    }
+
+
+    private static int calculate(int x) {
+        System.out.println(x);
+        if (x == 1) {
+            return 0;
+        }
+
+        List<Integer> l = new ArrayList<>();
+        for (int i = 2; i <= Math.sqrt(x); i++) {
+            
+            if (x % i == 0) {
+                l.add(i);
+                if (x / i <= 10_000_000) {
+                    System.out.println("d "+(x/i));
+                    return x/i;
+                }
+            }
+
+        }
+        System.out.println(l.toString());
+        if (!l.isEmpty()) {
+            return l.get(l.size() - 1);
+        }
+
+        return 1;
+    }
+}
+```
