@@ -60,3 +60,28 @@ class Solution {
     }
 }
 ```
+위의 문제를 더 쉽게 표현하면 이와 같다.   
+뒤에서부터 접근하면서 배달하거나 수거해야하는 상자수를 정해준다.   
+이 상자들이 사라질때까지 반복하면서 cap만큼 빼준다.   
+훨씬 빠르게 풀이가 가능하다.   
+
+```
+import java.util.Arrays;
+class Solution {
+    public long solution(int cap, int n, int[] deliveries, int[] pickups) {
+        long answer = 0;
+        int deliver = 0, pickup = 0;
+        for(int i = n-1; i >= 0; i--){
+            deliver += deliveries[i];
+            pickup += pickups[i];
+            while (deliver > 0 || pickup > 0){
+                deliver -= cap;
+                pickup -= cap;
+                answer += ((i+1) * 2);
+            }
+
+        }
+        return answer;
+    }
+}
+```
