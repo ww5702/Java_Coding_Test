@@ -724,3 +724,26 @@ System.out.println(m.group(2));
 ~ (비트 전환 연산자)
 << >> (쉬프트 연산자)
 ```
+## 그래프 인접리스트 구현
+```
+swift에서 사용하던 튜플식으로 구현하는법
+선언 후 초기화까지 해야 한다.
+ArrayList<Integer>[] list = new ArrayList[n+1];
+for (int i = 0; i <= n; i++) {
+        list[i] = new ArrayList<>();
+}
+for(int[] edge : edges) {
+        list[edge[0]].add(edge[1]);
+        list[edge[1]].add(edge[0]);
+}
+
+
+더 쉽게도 가능한데
+int[][] matrix = new int[n + 1][n + 1];
+for(int[] edge : edges) {
+        matrix[edge[0]][edge[1]] = 1;
+        matrix[edge[1]][edge[0]] = 1;
+}
+연결된 부분은 1로 2차원배열로도 표현이 가능하다
+단점은 공간 복잡도가 O(n^2)이다
+```
