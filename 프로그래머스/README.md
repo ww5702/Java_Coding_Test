@@ -187,6 +187,6 @@
 - [PCCP 기출문제] 3번 / 아날로그 시계
 - 
 
-## [Lecel 3](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203)
+## [Level 3](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203)
 - 이중우선순위큐(pqL, pqH 두개 이용)
 - 
