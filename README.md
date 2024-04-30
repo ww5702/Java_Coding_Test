@@ -644,7 +644,8 @@ pop
 // 첫번째 값을 반환하고 제거 비어있다면 null
 priorityQueue.poll();
 // 첫번째 값 제거 비어있다면 예외 발생
-priorityQueue.remove();
+priorityQueue.remove(2); -> pq를 탐색해서 첫번째 2제거
+priorityQueue.removeEq(2); -> 2 전부 제거   
 
 // 첫번째 값을 반환만 하고 제거 하지는 않는다.
 // 큐가 비어있다면 null을 반환
