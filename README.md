@@ -165,6 +165,11 @@ Math.floor(pie) // 3 버림
 Math.max(a,b)
 Math.min(a,b)
 
+<세제곱근, 네제곱근>
+Math.sqrt(4, 2.0) = 2이다.
+하지만 세제곱근 네제곱근은 pow를 이용해야한다.
+Math.pow(9, 1.0/num)
+
 <대문자, 소문자, 앞뒤로 공백제거> - str
 str.toUpperCase();
 str.toLowerCase();
