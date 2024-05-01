@@ -29,3 +29,39 @@ class Solution {
     }
 }
 ```
+좋아요를 가장 많이 받은 풀이이다.   
+풀이 방식은 똑같았지만      
+while문을 이용해 해당 index에 +1을 해주는 방식이었다.   
+하지만 이 방식은 n이 10,000 이하라서 가능한 풀이인것 같다.   
+```
+import java.util.Arrays;
+
+public class BestSet {
+
+    public int[] bestSet(int n, int s){
+       int[] answer = null; 
+      if(n>s) {
+          answer = new int[1];
+          answer[0] = -1;
+        } else {
+         answer = new int[n];
+         int i = 0;
+         while(s>0) {
+            answer[(i%n)]++;
+          i++;
+          s--;
+         }
+
+        }
+                Arrays.sort(answer);
+        return answer;  
+    }
+    public static void main(String[] args) {
+        BestSet c = new BestSet();
+        //아래는 테스트로 출력해 보기 위한 코드입니다.
+        System.out.println(c.bestSet(3,13));
+    }
+
+}
+
+```
