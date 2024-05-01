@@ -84,3 +84,62 @@ class Solution {
     }
 }
 ```
+따라서 dfs한번만에 구할 수 있도록 풀이해봤지만 시간초과 발생   
+
+```
+import java.util.Arrays;
+import java.util.*;
+class Solution {
+    static int[][] dis;
+    static int[][] map;
+    static int[] dy;
+    static int[] dx;
+    static int answer;
+    static int num;
+    public int solution(int m, int n, int[][] puddles) {
+        answer = 0;
+        map = new int[n][m];
+        num = 100001;
+        dy = new int[] {1,0};
+        dx = new int[] {0,1};
+        for (int[] puddle : puddles) {
+            map[puddle[1]-1][puddle[0]-1] = 1;
+        }
+        //System.out.println(Arrays.deepToString(map));
+        
+        dfs(m,n,0,0,0);
+        
+        return answer % 1_000_000_007;
+    }
+    
+    public void dfs(int m, int n, int y, int x, int cnt) {
+        // 어차피 최단거리만
+        if (cnt > num) { return; }
+        
+        if (y == n-1 && x == m-1) {
+            //System.out.println("도착");
+            if (cnt < num) {
+                //System.out.println("갱신 "+cnt);
+                num = cnt;
+                answer = 1;
+            } else if (cnt == num) {
+                //System.out.println("같다");
+                answer += 1;
+            }
+        }
+        
+        for (int i = 0; i < 2; i++) {
+            int newY = y + dy[i];
+            int newX = x + dx[i];
+            if (newY >= 0 && newY < n && newX >= 0 && newX < m) {
+                if (map[newY][newX] != 1) {
+                    //System.out.println(newY+" "+newX);
+                    dfs(m,n,newY,newX,cnt+1);
+                }
+            }
+            
+        }
+        
+    }
+}
+```
