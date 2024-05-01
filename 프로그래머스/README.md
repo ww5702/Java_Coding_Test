@@ -190,6 +190,6 @@
 ## [Level 3](https://github.com/ww5702/Java_Coding_Test/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/Level%203)
 - 이중우선순위큐(pqL, pqH 두개 이용)
 - 정수 삼각형(dp)
-- 네트워크
-- 야근 지수
+- 네트워크(bfs)   
+- 야근 지수(pq)   
 - 단어 변환(dfs)   
