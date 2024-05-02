@@ -275,6 +275,7 @@ for (int i = 0; i < land.length; i++) {
 List<String> arrlist = new ArrayList<>();
 List<int []> 2list = new ArrayList<>(); 2차원리스트
 ArrayList<Point>[] listPoint = new ArrayList[N+1]; 구조체를 2차원리스트로 선언
+List.of(1) 선언과 동시에 초기화
 
 추가
 arrList.add(str);
