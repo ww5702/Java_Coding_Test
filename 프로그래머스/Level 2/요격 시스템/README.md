@@ -5,23 +5,21 @@ x좌표를 확인해서 전에 쐈던 레이저가 닿는 y좌표보다 작을�
 ```
 import java.util.Arrays;
 class Solution {
-    public int solution(String name) {
+    public int solution(int[][] targets) {
         int answer = 0;
-        int idx = 0;
-        int move = name.length()-1;
-        
-        for (int i =0 ; i < name.length(); i++) {
-            answer += Math.min(name.charAt(i) - 'A', 'Z' - name.charAt(i) + 1);
-            idx = i + 1;
-            while (idx < name.length() && name.charAt(idx) == 'A') {
-                idx += 1;
+        Arrays.sort(targets, (o1, o2) -> {
+            return o1[1] - o2[1];
+        });
+        //System.out.println(Arrays.deepToString(targets));
+        int s = 0,e = 0;
+        for (int[] target: targets) {
+            if (target[0] > s) {
+                answer += 1;
+                s = target[1];
             }
-            //
-            move = Math.min(move, i*2 + name.length()-idx);
-            move = Math.min(move, (name.length()-idx)*2 + i);
+            
         }
-        
-        return answer + move;
+        return answer;
     }
 }
 ```
