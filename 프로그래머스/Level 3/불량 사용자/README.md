@@ -62,3 +62,42 @@ class Solution {
     }
 }
 ```
+좋아요를 가장 많이 받은 풀이이다.   
+풀이방식은 같았으나 bit masking을 사용하여 풀이하였다.   
+banned_id를 *를 제외하고 만들어 matches를 이용해 같은지 확인한다.   
+[\\w\\d]는 알파벳 소문자 or 0~9 숫자가 있는지 라는 뜻이다.   
+```
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Solution {
+
+    Set<Integer> set;
+
+    public int solution(String[] user_id, String[] banned_id) {
+        set = new HashSet<>();
+
+        go(0, user_id, banned_id, 0);
+
+        return set.size();
+    }
+
+    public void go(int index, String[] user_id, String[] banned_id, int bit) {
+
+        if(index == banned_id.length) {
+            set.add(bit);
+            return;
+        }
+
+        String reg = banned_id[index].replace("*", "[\\w\\d]");
+        for(int i=0; i<user_id.length; ++i) {
+            if((((bit>>i) & 1) == 1) || !user_id[i].matches(reg)) continue;
+            go(index + 1, user_id, banned_id, (bit | 1<<i));
+        }
+
+    }
+
+}
+
+```
