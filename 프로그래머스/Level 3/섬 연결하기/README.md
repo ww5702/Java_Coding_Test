@@ -57,3 +57,47 @@ class Solution {
     }
 }
 ```
+이처럼 섬을 연결하던가 할때 유니온-파인드가 가능한지 생각해보는것이 좋다.   
+훨씬 빠르고 간편할 수 있다.   
+```
+import java.util.Arrays;
+class Solution {
+    static int[] parent;
+    public static void union(int a, int b) {
+    	a = find(a);
+    	b = find(b);
+    	if(a != b)
+    		parent[b] = a;
+    }
+    
+    public static int find(int x) {
+	    if(parent[x] == x) return x;
+	    return find(parent[x]);
+    }   
+    
+    public int solution(int n, int[][] costs) {
+        int answer = 0;
+        parent = new int[n];
+        for (int i = 0; i < parent.length; i++) parent[i] = i;
+        Arrays.sort(costs, (o1,o2) -> {
+            return o1[2] - o2[2];
+        });
+        //System.out.println(Arrays.toString(parent));
+        //System.out.println(Arrays.deepToString(costs));
+        
+        for (int[] cost : costs) {
+            int start = cost[0];
+            int end = cost[1];
+            int value = cost[2];
+            if (find(start) != find(end)) {
+                
+                union(start, end);
+                answer += value;
+            }
+            
+        }
+        
+        return answer;
+    }
+}
+```
