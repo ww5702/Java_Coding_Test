@@ -754,3 +754,23 @@ for(int[] edge : edges) {
 연결된 부분은 1로 2차원배열로도 표현이 가능하다
 단점은 공간 복잡도가 O(n^2)이다
 ```
+## union-find
+만약 최단거리를 묻거나 그런 문제일때   
+bfs사용도 있지만 union-find가 가능한지 확인해보는것도   
+좋은 방법이다.   
+```
+static int[] parent;
+public static void union(int a, int b) {
+        a = find(a);
+        b = find(b);
+        if(a != b)
+                parent[b] = a;
+        }
+public static int find(int x) {
+        if(parent[x] == x) return x;
+        return find(parent[x]);
+}
+main에서 선언 후 초기화까지 진행
+parent = new int[n];
+for (int i = 0; i < parent.length; i++) parent[i] = i; 
+```
