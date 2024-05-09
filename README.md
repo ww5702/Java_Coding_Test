@@ -257,6 +257,18 @@ Arrays.sort(failure, (o1, o2) -> {
         });
 만약 [1]값들이 같다면 [0]의 조건들로 오름차순, 아니라면[1]의 조건으로 오름차순
 
+Arrays.sort(tickets, (o1,o2) -> {
+            if (o1[0].equals(o2[0])) {
+                return o1[1].compareTo(o2[1]);
+            } else {
+                return o1[0].compareTo(o2[0]);
+            }
+        });
+string 2차원 배열이라면 equals로 사용하고, o1[1].compareTo(o2[1])
+처럼 사용해야 한다.
+o1[0] o2[0]이 같다면 [1]의 값을 기준으로 오름차순,
+같지 않다면 [0]값을 기준으로 오름차순이다.
+
 o2 - o1 = 내림차순
 o1 - o2 = 오름차순
 Arrays.sort(failure, (o1,o2) -> (o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o2[0]));
