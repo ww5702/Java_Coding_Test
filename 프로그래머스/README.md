@@ -204,5 +204,5 @@
 - 보석 쇼핑(set, while, start, end)
 - 징검다리 건너기(이분탐색)
 - 섬 연결하기(union-find)
-- 가장 먼 노드(bfs, stream)
+- 가장 먼 노드(연결리스트, bfs, stream)
 - 
