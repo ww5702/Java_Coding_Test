@@ -202,3 +202,71 @@ class Solution {
     }
 }
 ```
+좋아요를 가장 많이 받은 풀이를 보니   
+처음 풀었던 bfs방식으로도 풀이가 가능했다.   
+단, 계속해서 answer값을 확인해주고,   
+result[][]의 값에 100을 추가해준 값보다 작다면 반복문을 실행시켜준다.   
+```
+import java.util.*;
+
+class Solution {
+    private static class Entity{
+        int y;
+        int x;
+        int dir;
+        int total;
+        public Entity(int y, int x, int dir,int total) {
+            this.y= y;
+            this.x = x;
+            this.dir = dir;
+            this.total = total;
+        }
+    }
+    private static int N;
+    private static int[][] cache;
+    private static int[][] map;
+    private static final int INF = 999999;
+    private static int[] dy = {-1,0,1,0};
+    private static int[] dx = {0,-1,0,1};
+
+    public int solution(int[][] board) {
+
+        int answer = INF;
+        map = board;
+        N = board.length;
+        cache = new int[N][N];
+
+        for(int i = 0 ; i<N;i++){
+            Arrays.fill(cache[i],INF);
+        }
+
+        cache[0][0] = 0;
+
+        Queue<Entity> q = new LinkedList<>();
+        q.add(new Entity(0,0,-1,0));
+        while(!q.isEmpty()) {
+            Entity now = q.poll();
+            if(now.y == N-1 && now.x == N-1){
+                answer = Math.min(answer,now.total);
+                continue;
+            }
+            for(int i = 0; i <4; i++) {
+                int ny = now.y + dy[i];
+                int nx = now.x + dx[i];
+                if(ny >=0 && ny < N && nx >=0 && nx < N &&map[ny][nx] == 0 &&cache[ny][nx] > now.total) {
+
+                    if(now.dir == -1 || now.dir == i)  {
+                        cache[ny][nx] = now.total + 100;
+                        q.add(new Entity(ny,nx,i,now.total+100));
+                    }
+                    else{
+                        cache[ny][nx] = now.total + 100;
+                        q.add(new Entity(ny,nx,i,now.total+600));
+                    }
+                }
+            }
+        }
+        return answer;
+    }
+}
+```
