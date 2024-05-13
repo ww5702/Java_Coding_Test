@@ -137,7 +137,68 @@ class Solution {
 }
 ```
 하지만 해당 경우는 시간초과가 발생한다.   
-따라서 dp밖에 남지 않아 동적계획법으로 구현해보았다.   
+따라서 bfs에 각 방향으로 접근하는 [4]를 더해줘 3차원배열로 해결하였다.   
+만약 각 좌표의 [0][1][2][3]이 0이라면 아직 방문하지 않았다는 의미이다.   
 ```
-
+import java.util.*;
+import java.util.Arrays;
+class Point {
+    int y;
+    int x;
+    int dir;
+    int cost;
+    public Point(int y, int x, int dir, int cost) {
+        this.y = y;
+        this.x = x;
+        this.dir = dir;
+        this.cost = cost;
+    }
+}
+class Solution {
+    static int[] dy;
+    static int[] dx;
+    static int[][][] visited;
+    public int solution(int[][] board) {
+        dy = new int[] {1,-1,0,0};
+        dx = new int[] {0,0,1,-1};
+        visited = new int[board.length][board[0].length][4];
+        
+        return bfs(board);
+    }
+    public int bfs(int[][] board) {
+        Queue<Point> q = new LinkedList<>();
+        q.add(new Point(0,0,-1,0));
+        
+        int ans = Integer.MAX_VALUE;
+        
+        while (!q.isEmpty()) {
+            Point now = q.poll();
+            
+            if (now.y == board.length-1 && now.x == board[0].length-1) {
+                ans = Math.min(ans, now.cost);
+            }
+            
+            for (int i = 0; i < 4; i++) {
+                int newY = now.y + dy[i];
+                int newX = now.x + dx[i];
+                
+                if (newY >= 0 && newY < board.length && newX >= 0 && newX < board[0].length && board[newY][newX] != 1) {
+                    int nextCost = now.cost;
+                    if (now.dir == -1 || now.dir == i) {
+                        nextCost += 100;
+                    } else {
+                        nextCost += 600;
+                    }
+                    
+                    if (visited[newY][newX][i] == 0 || board[newY][newX] >= nextCost) {
+                        q.add(new Point(newY,newX,i,nextCost));
+                        visited[newY][newX][i] = 1;
+                        board[newY][newX] = nextCost;
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+}
 ```
