@@ -80,3 +80,64 @@ class Solution {
     }
 }
 ```
+틀린 이유는 과정에서 해당 좌표에서 적은 코스트로 지나갔는데   
+결과론적으로 해당 좌표로 지나갔을때 더 적은값으로 결과값에 도달할때가 존재하기에   
+틀리는 테케들이 있는 것이다.   
+따라서 dfs로 전부 실행 후 정답좌표의 값들을 비교해보았다.   
+```
+import java.util.*;
+import java.util.Arrays;
+class Solution {
+    static int[] dy;
+    static int[] dx;
+    static boolean[][] visited;
+    static int answer;
+    public int solution(int[][] board) {
+        dy = new int[] {1,-1,0,0};
+        dx = new int[] {0,0,1,-1};
+        visited = new boolean[board.length][board[0].length];
+        visited[0][0] = true;
+        
+        answer = Integer.MAX_VALUE;
+        dfs(board,0,0,-1,0);
+        
+        return answer;
+    }
+    
+    public void dfs(int[][] board, int y, int x, int dir, int cost) {
+        if (y == board.length-1 && x == board[0].length-1) {
+            answer = Math.min(answer, cost);
+            return;
+        }
+        
+        for (int i = 0; i < 4; i++) {
+            int newY = y + dy[i];
+            int newX = x + dx[i];
+            if (newY >= 0 && newY < board.length && newX >= 0 && newX < board[0].length) {
+                // 벽이 아니고
+                if (board[newY][newX] != 1) {
+                    // 첫번째 움직임인지
+                    if (!visited[newY][newX]) {
+                        if (i == dir || dir == -1) {
+                            visited[newY][newX] = true;
+                            dfs(board,newY,newX,i,cost+100);
+                            visited[newY][newX] = false;
+                        } else {
+                            visited[newY][newX] = true;
+                            dfs(board,newY,newX,i,cost+600);
+                            visited[newY][newX] = false;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        return;
+    }
+}
+```
+하지만 해당 경우는 시간초과가 발생한다.   
+따라서 dp밖에 남지 않아 동적계획법으로 구현해보았다.   
+```
+
+```
