@@ -786,3 +786,16 @@ main에서 선언 후 초기화까지 진행
 parent = new int[n];
 for (int i = 0; i < parent.length; i++) parent[i] = i; 
 ```
+## 깊은 복사 vs 얕은 복사   
+```
+ArrayList<String> list = new ArrayList<>();
+list.add("a");
+ArrayList<String> newList = list;
+newList.add("b");
+System.out.println(list.toString()) // a b
+System.out.println(newList.toString()) // a b
+
+따라서 깊은 복사를 해야 따로 저장이 가능
+ArrayList<String> new ArrayList<>(list);
+
+```
