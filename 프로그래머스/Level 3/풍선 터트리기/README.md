@@ -60,3 +60,44 @@ class Solution {
     }
 }
 ```
+구현 문제였다.   
+쉽게 생각해서 왼쪽 오른쪽 인접한 숫자들보다 크기만 하다면 가능한 숫자이다.   
+따라서 왼쪽에서부터 가장 작은수를 정렬하고,   
+가장 오른쪽에서부터 가장 작은수를 정렬한다음   
+해당 Index가 오른쪽 왼쪽의 배열보다 크기만 하다면 계속 큰수만 없애주다   
+작은수를 한번 없앨 수 있다.   
+
+```
+import java.util.Arrays;
+import java.util.*;
+import java.util.stream.*;
+
+class Solution {
+    public int solution(int[] a) {
+        int[] leftMin = new int[a.length];
+        int[] rightMin = new int[a.length];
+        int l = a[0];
+        int r = a[a.length-1];
+        
+        for (int i = 1; i < a.length-1; i++) {
+            if (l > a[i]) l = a[i];
+            leftMin[i] = l;
+        }
+        for(int i = a.length - 2; i > 0; i--) {
+            if(r > a[i]) r = a[i];
+            rightMin[i] = r;
+        }
+        //System.out.println(Arrays.toString(leftMin));
+        //System.out.println(Arrays.toString(rightMin));
+        if (a.length == 1) return 1;
+        
+        int answer = 2;
+        for (int i = 1; i <= a.length-2; i++) {
+            if (a[i] > leftMin[i] && a[i] > rightMin[i]) continue;
+            answer += 1;
+        }
+        
+        return answer;
+    }
+}
+```
