@@ -796,6 +796,29 @@ System.out.println(list.toString()) // a b
 System.out.println(newList.toString()) // a b
 
 따라서 깊은 복사를 해야 따로 저장이 가능
-ArrayList<String> new ArrayList<>(list);
+ArrayList<String> newList = new ArrayList<>(list);
+
+배열의 깊은복사
+int[] A = {1,2,3,4,5};
+int[] B = A.clone();
+
+위와 같이 사용 가능 하지만 2차원배열은 불가
+int[][] A = {{1,2,3,4,5}, {6,7,8,9,10}};
+int[][] B = new int[A.length][A[0].length]; // B 선언
+
+for(int i = 0; i < A.length; i++){ // 2중 반복문
+        for(int j = 0 ; j < A[0].length; j++){
+                B[i][j] = A[i][j];
+        }
+}
+
+위와 같이 깡으로 복사 혹은
+int[][] C = new int[A.length][A[0].length]; // C 선언,
+
+for(int i = 0; i < A.length; i++){ // 반복문 + ArrayCopy
+        System.arraycopy(A[i], 0, C[i], 0, C[i].length);
+}
+arraycopy 사용
 
 ```
+
