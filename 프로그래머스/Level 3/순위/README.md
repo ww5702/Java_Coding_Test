@@ -54,3 +54,48 @@ class Solution {
     
 }
 ```
+좋아요를 가장 많이 받은 풀이이다.   
+이 방법은 다익스트라 방법을 사용한 것 같았다.   
+경유지를 거쳐서 이동해 카운트를 늘리는 방식인데   
+이는 n이 500개 이하일때만 가능하긴하다.   
+선수가 100명 이하라서 가능했던거같다.   
+하지만 dfs풀이가 당연히 시간이 더 빠르긴하다.   
+
+```
+class Solution {
+    public int solution(int n, int[][] results) {
+        int answer = 0;
+
+        boolean[][] chk = new boolean[n + 1][n + 1];
+
+        for(int i = 0; i < results.length; i++) {
+            chk[results[i][0]][results[i][1]] = true;
+        }
+
+        for(int k = 1; k < n + 1; k++) {
+            for(int i = 1; i < n + 1; i++) {
+                for(int j = 1; j < n + 1; j++) {
+                    if(i != j && chk[i][k] && chk[k][j]) {
+                        chk[i][j] = true;
+                    }
+                }
+            }
+        }
+
+        for(int i = 1; i < n + 1; i++) {
+            boolean pass = true;
+            for(int j = 1; j < n + 1; j++) {
+                if(i != j && !(chk[i][j] || chk[j][i])) {
+                    pass = false;
+                    break;
+                }
+            }
+            if(pass) {
+                answer++;
+            }
+        }
+
+        return answer;
+    }
+}
+```
