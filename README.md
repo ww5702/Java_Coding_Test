@@ -821,4 +821,48 @@ for(int i = 0; i < A.length; i++){ // 반복문 + ArrayCopy
 arraycopy 사용
 
 ```
+## 배열 회전
+2차원 배열을 회전시키는 경우이다.   
+nxn 처럼 가로 세로가 같을 경우 가운데 기준을 잡고 가로 세로를 서로 바꿔주면 된다.   
+```
+public int[][] rotaion(int[][] key) {
+        int n = key.length;
 
+        // reverse up and down
+        for (int i = 0; i < n / 2; i++) {
+            for (int j = 0; j < n; j++) {
+                int temp = key[i][j];
+                key[i][j] = key[n - i - 1][j];
+                key[n - i - 1][j] = temp;
+
+            }
+        }
+
+        // reverse diagonally
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                int temp = key[i][j];
+                key[i][j] = key[j][i];
+                key[j][i] = temp;
+            }
+        }
+        
+        return key;
+    }
+```
+하지만 가로 세로가 다르다면 이와 같이 한다.   
+```
+public int[][] rotaion(int[][] key) {
+        int nn = key.length;
+        int mm = key[0].length;
+        int[][] rotate = new int[mm][nn];
+
+        for (int i = 0; i < rotate.length; i++) {
+            for (int j = 0; j < rotate[i].length; j++) {
+                rotate[i][j] = key[nn-1-j][i];
+            }
+        }
+
+        return rotate;
+    }
+```
