@@ -866,3 +866,46 @@ public int[][] rotaion(int[][] key) {
         return rotate;
     }
 ```
+## list 사용자설정 정렬
+```
+class Point implements Comparable<Point> {
+    int num1;
+    int num2;
+    int idx;
+    int sum;
+    
+    public Point(int num1, int num2, int idx, int sum) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.idx = idx;
+        this.sum = sum;
+    }
+    
+    @Override
+    public int compareTo(Point point) {
+        if (point.sum < sum) {
+            return 1;
+        } else if (point.sum > sum) {
+            return -1;
+        }
+        return 0;
+    }
+    
+    @Override    
+    public String toString() {        
+        return "[ "+ this.num1 + " "+this.num2+" "+this.idx+" "+this.sum+ " ]";
+    }
+    
+    
+}
+```
+이와 같이 Point를 사용하여 리스트를 작성했을때   
+implements Comparable 을 사용하여 정렬을 만들어낼 수 있다.   
+
+```
+오름차순
+Collections.sort(list);
+내림차순
+Collections.sort(list, Collections.reverseOrder());
+```
+그리고 사용하는 방식은 똑같다.   
