@@ -93,3 +93,72 @@ class Solution {
     }
 }
 ```
+따라서 연결리스트로 문제를 풀이해야 한다.   
+next와 cur, prev을 이용해   
+사라진 노드들을 서로 이어준다.   
+```
+import java.util.*;
+import java.util.Arrays;
+public class Node{
+    int pre, cur, nxt;
+        
+    public Node(int pre, int cur, int nxt) {
+        this.pre = pre;
+        this.cur = cur;
+        this.nxt = nxt;
+    }
+}
+
+class Solution {
+    public String solution(int n, int k, String[] cmd) {
+        int[] pre = new int[n];
+        int[] next = new int[n];
+        for (int i = 0; i < n; i++) {
+            pre[i] = i-1;
+            next[i] = i+1;
+        }
+        next[n-1] = -1;
+        //System.out.println(Arrays.toString(pre));
+        //System.out.println(Arrays.toString(next));
+        
+        Stack<Node> stack = new Stack<>();
+        StringBuilder sb = new StringBuilder("O".repeat(n));
+        for (int i = 0; i < cmd.length; i++) {
+            //System.out.println(Arrays.toString(pre));
+            //System.out.println(Arrays.toString(next));
+            char c = cmd[i].charAt(0);
+            if (c == 'U') {
+                int num = Integer.valueOf(cmd[i].substring(2));
+                while(num-- > 0) {
+                    k = pre[k];
+                }
+            } else if (c == 'D') {
+                int num = Integer.valueOf(cmd[i].substring(2));
+                while(num-- > 0) {
+                    k = next[k];
+                }
+            } else if (c == 'C') {
+                stack.push(new Node(pre[k], k, next[k]));
+                if(pre[k] != -1) next[pre[k]] = next[k];
+                if(next[k] != -1) pre[next[k]] = pre[k];
+                sb.setCharAt(k, 'X');
+                
+                if(next[k] != -1) k = next[k];
+                else k = pre[k];
+            } else {
+                Node node = stack.pop();
+                if(node.pre != -1) next[node.pre] = node.cur;
+                if(node.nxt != -1) pre[node.nxt] = node.cur;
+                sb.setCharAt(node.cur, 'O');
+            }
+            
+            //System.out.println("이동");
+            //System.out.println(Arrays.toString(pre));
+            //System.out.println(Arrays.toString(next));
+            //System.out.println(k);
+        }
+        
+        return sb.toString();
+    }
+}
+```
