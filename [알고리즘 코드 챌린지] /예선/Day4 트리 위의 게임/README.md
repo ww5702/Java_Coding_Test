@@ -105,47 +105,54 @@ class Main {
 
     }
 }
-/*
-1 3
-4
 
-2 1
-3 4
+```
+정답지이다.   
 
-3 4
+```
+import java.util.*;
 
-0 0
+class Main {
+    static long n, a, b;
+    static ArrayList<Long>[] v = new ArrayList[100050];
+    static long[] dp = new long[100050];
+    static final long inf = (long)1e12;
 
-5 1
-3 4
-  1
-2 3 5
-  4
+    static void dfs(long x, long par) {
+        long ret = inf;
+        for (Long nxt : v[(int)x]) {
+            if (nxt == par) continue;
+            dfs(nxt, x);
+            ret = Math.min(ret, dp[nxt.intValue()]);
+        }
+        if (ret == inf) ret = 0;
+        dp[(int)x] = x - ret;
+    }
 
-1 3
-4
-
-2 0
-
-3 4
-
-4 0
- 
-5 0
-
-
-    1
-  2   3
-4    5  6
-
-1 2
-4
-
-2 4
-
-3 5
-
-4 
-
-*/
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);  
+        
+        n=scanner.nextLong();
+        
+        for(int i=0;i<100050;i++)
+            v[i]=new ArrayList<>();
+            
+        for(int i=1;i<n;i++){
+            a=scanner.nextLong();
+            b=scanner.nextLong();
+            
+            v[(int)a].add(b);
+            v[(int)b].add(a);
+        }
+        
+       dfs(1,0);
+       
+       for(int i=1;i<=n;i++){
+           if(dp[i]>=0)
+               System.out.println("1");
+           else
+               System.out.println("0");
+       }
+   } 
+}
 ```
