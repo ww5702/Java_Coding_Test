@@ -1,6 +1,5 @@
 hashset과 left,right를 이용해서 풀이하는것같다.   
 첫 제출 40점   
-
 ```
 import java.util.*;
 import java.io.*;
@@ -9,41 +8,28 @@ class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int[] arr = new int[n];
-        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+        int[] arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         HashSet<Integer> set = new HashSet<Integer>();
-        for (int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
-            set.add(arr[i]);
-        }
-        HashMap<Integer, Integer> dict = new HashMap<Integer, Integer>();
-        Iterator<Integer> iterSet = set.iterator();
-        while(iterSet.hasNext()) {
-            int next = iterSet.next();
-            dict.put(next, dict.getOrDefault(next, 0));
-        }
-        System.out.println(dict);
-        
-        int notOne = 0;
-        int cnt = 0;
+        //System.out.println(set.toString());
         int result = 0;
 
         int start = 0, end = 0;
         while (end < n) {
-            int value = dict.get(arr[end]);
-            System.out.println(arr[end]);
-            System.out.println(start+" "+end);
-            
-            if (value == 0) {
-                dict.put(arr[end], value + 1);
-                result = Math.max(result, end-start+1);
+            while (end < n && !set.contains(arr[end])) {
+                //System.out.println(arr[end]);
+                set.add(arr[end]);
                 end += 1;
-            } else {
-                dict.put(arr[start], value - 1);
+            }
+
+            //System.out.println(set.toString());
+            //System.out.println(start+" "+end);
+
+            result = Math.max(result, end - start);
+
+            if (end < n) {
+                set.remove(arr[start]);
                 start += 1;
             }
-            System.out.println(dict);
-            System.out.println(result);
             
         }
 
